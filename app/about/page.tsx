@@ -1,6 +1,6 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -12,9 +12,8 @@ export default function AboutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-amber-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+    <div className="min-h-screen bg-background">
+      <header className="bg-card shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
@@ -27,25 +26,25 @@ export default function AboutPage() {
               <div className="ml-10 flex items-baseline space-x-8">
                 <Link
                   href="/"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-muted-foreground px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-900 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-foreground px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-muted-foreground px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
-                  Services
+                  What We Do
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-muted-foreground px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -55,7 +54,7 @@ export default function AboutPage() {
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-[#d16050] p-2 transition-colors"
+                className="text-muted-foreground hover:text-primary p-2 transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -64,32 +63,32 @@ export default function AboutPage() {
           </div>
 
           {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-gray-200 py-4 bg-white shadow-lg">
+            <div className="md:hidden border-t border-border py-4 bg-card shadow-lg">
               <div className="flex flex-col space-y-1">
                 <Link
                   href="/"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-muted-foreground px-4 py-3 text-base font-medium hover:text-primary hover:bg-secondary cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-900 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-foreground px-4 py-3 text-base font-medium hover:text-primary hover:bg-secondary cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-muted-foreground px-4 py-3 text-base font-medium hover:text-primary hover:bg-secondary cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Services
+                  What We Do
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-muted-foreground px-4 py-3 text-base font-medium hover:text-primary hover:bg-secondary cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact Us
@@ -100,70 +99,121 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section
-        className="relative text-white py-12 sm:py-16 lg:py-20"
-        style={{ background: `linear-gradient(135deg, #d16050 0%, #953f37 100%)` }}
-      >
+      <section className="relative text-primary-foreground py-6 sm:py-8 lg:py-10 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-balance leading-tight">
-            About Soultrove
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-balance leading-tight">
+            About SoulTrove
           </h1>
-          <p
-            className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto"
-            style={{ color: "rgba(255, 255, 255, 0.9)" }}
-          >
-            India's first holistic digital ecosystem dedicated to supporting children and adults with developmental
-            disabilities through lifelong solutions.
-          </p>
         </div>
       </section>
 
-      {/* About Us Main Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="order-last lg:order-first">
-              <img
-                src="/digital-ecosystem-mental-health-coach-lifetime-support.jpg"
-                alt="Digital ecosystem showing lifetime support between mental health coach and patients"
-                className="rounded-lg shadow-lg w-full"
-              />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left side - Story content */}
+            <div className="space-y-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6">
+                The Story of Soultrove - How the name reflects the mission
+              </h2>
+
+              {/* The Seed of an Idea */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">The Seed of an Idea</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Soultrove began with a personal journey — one marked by the challenges and triumphs of raising a child
+                  with developmental challenges. Along the way, it became clear that families, caregivers, and service
+                  providers often walk parallel paths but remain disconnected. Knowledge, emotional support, and
+                  trustworthy services existed, but scattered like treasures hidden across a vast landscape.
+                </p>
+              </div>
+
+              {/* Why Soul */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Why "Soul"</h3>
+                <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                  The Soul is the deepest, most human part of us. It represents empathy, care, resilience, and the
+                  spirit of community. In our work, it's the soul of a parent staying up late to research therapies, the
+                  soul of a therapist adapting methods for one unique child, and the soul of communities who believe
+                  that inclusion is not charity — it's humanity.
+                </p>
+                <p className="text-base text-muted-foreground leading-relaxed font-medium">
+                  Soultrove puts people, not just problems, at the heart of the solution.
+                </p>
+              </div>
+
+              {/* Why Trove */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Why "Trove"</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  A Trove is a precious collection — often hidden until someone takes the time to uncover it. In our
+                  world, it's the wealth of expertise, resources, and lived experiences that already exist but remain
+                  difficult to find and access. Soultrove gathers these treasures—therapists, special educators,
+                  technology tools, peer support, and lived wisdom—into one safe, trusted place.
+                </p>
+              </div>
+
+              {/* The Evolution Theme */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">The Evolution Theme</h3>
+                <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                  The name Soultrove reflects an evolutionary journey — from isolation to connection, from fragmented
+                  help to holistic support, from uncertainty to empowered action.
+                </p>
+                <ul className="space-y-3 text-base text-muted-foreground">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>
+                      <strong>Rooted in empathy:</strong> Like a tree that grows from strong roots, Soultrove draws
+                      strength from shared human stories.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>
+                      <strong>Branching into possibility:</strong> We connect parents, caregivers, and service providers
+                      through digital pathways—allowing knowledge and compassion to spread.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    <span>
+                      <strong>Bearing the fruits of change:</strong> With technology, we make access faster, fairer, and
+                      more personalized, helping families evolve from surviving to thriving.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* The Mission Embodied in the Name */}
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">The Mission Embodied in the Name</h3>
+                <p className="text-base text-muted-foreground leading-relaxed mb-4">Soultrove's mission is twofold:</p>
+                <ol className="space-y-3 text-base text-muted-foreground mb-4 list-decimal list-inside">
+                  <li>
+                    Build a digital community where parents, caregivers, and service providers connect without barriers.
+                  </li>
+                  <li>
+                    Deliver health-tech innovation that turns scattered information into actionable, personalized
+                    support.
+                  </li>
+                </ol>
+                <p className="text-base text-muted-foreground leading-relaxed italic">
+                  In essence, the name is not just a brand — it's a promise: to safeguard the treasures of knowledge,
+                  compassion and expertise, and share them with every soul who needs them.
+                </p>
+              </div>
             </div>
-            <div className="text-center lg:text-left">
-              <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Our Story</h2>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
-                Soultrove was born out of a deeply personal journey—one that resonates with millions of families
-                navigating the lifelong challenges of developmental disabilities. We are building India's first holistic
-                digital ecosystem dedicated to children and adults with Autism, ADHD, Learning Disabilities,
-                Intellectual Disabilities, Cerebral Palsy, Down Syndrome, and related conditions.
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                Unlike fragmented solutions that focus only on a single stage of life or a single service, Soultrove
-                brings everything together—healthcare, therapies, special education, vocational training, legal and
-                financial planning, assisted living, and inclusion pathways—on one trusted platform.
-              </p>
-              <div className="space-y-3 mb-6 sm:mb-8">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#d16050" }} />
-                  <span className="text-sm sm:text-base text-gray-700">
-                    <strong>Life-span support:</strong> From early diagnosis to adulthood, parents and individuals find
-                    continuity of care.
-                  </span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#d16050" }} />
-                  <span className="text-sm sm:text-base text-gray-700">
-                    <strong>360° ecosystem:</strong> Families, service providers, legal experts, educators, and
-                    employers under one roof.
-                  </span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#d16050" }} />
-                  <span className="text-sm sm:text-base text-gray-700">
-                    <strong>Future-focused:</strong> We don't just solve today's challenges; we help families secure
-                    tomorrow's independence and economic sustenance.
-                  </span>
+
+            {/* Right side - Image */}
+            <div className="lg:sticky lg:top-24">
+              <div className="relative">
+                <img
+                  src="/therapist-patient-clean-background.jpg"
+                  alt="The Story of Soultrove - Connecting families and therapists"
+                  className="w-full h-auto rounded-lg shadow-lg object-cover"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 p-3 rounded-lg shadow-md">
+                  <img src="/soultrove-logo.svg" alt="Soultrove Logo" className="h-12 w-auto" />
                 </div>
               </div>
             </div>
@@ -171,90 +221,113 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-amber-50">
+      {/* Core Values */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">Who We Are</h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              We are a passionate team of professionals, parents, and advocates united by a common mission to transform
-              lives through technology and compassion.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-            <div className="text-center lg:text-left">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                To create a comprehensive digital ecosystem that empowers individuals with developmental disabilities
-                and their families to achieve independence, inclusion, and secure futures through accessible, quality
-                services and community support.
-              </p>
-
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-                A world where every individual with developmental disabilities has access to the resources, support, and
-                opportunities they need to thrive throughout their lifetime, fostering a truly inclusive society.
-              </p>
-            </div>
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="order-2 lg:order-1">
               <img
-                src="/diverse-team-working-together-on-inclusive-technol.jpg"
-                alt="Team working on inclusive platform"
-                className="rounded-lg shadow-lg w-full"
+                src="/therapist-elderly-caring.jpg"
+                alt="What We Stand For - Our Core Values"
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
               />
+            </div>
+
+            {/* Right side - Core Values content */}
+            <div className="order-1 lg:order-2 space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6">
+                What We Stand For – Our Core Values
+              </h2>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Empathy</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Every family's journey matters; we listen first.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Integrity</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Transparent, ethical, and responsible in all we do.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Collaboration</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Together with families, providers and communities for better outcomes.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Inclusion</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Every individual deserves dignity and opportunity.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Future-readiness</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Building solutions that secure tomorrow, not just today.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+      {/* The Soultrove Team */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">Soultrove Leadership Team</h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              Meet the dedicated professionals and advocates working tirelessly to build a more inclusive future for
-              individuals with developmental disabilities.
-            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">The Soultrove Team</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
             {[
               {
                 name: "Arindam Majumdar",
                 role: "Founder & MD, Soultrove India Pvt Ltd",
                 description:
-                  "Arindam Majumdar is a senior business leader with 30+ years of experience across leading multinational organizations in energy, infrastructure and technology. He has held CEO and CXO roles, driving business growth, market expansion and successful turnarounds while building high-performing teams and fostering innovation. Driven by his journey as a parent to a young adult with developmental disability, Arindam founded Soultrove to empower families through access, inclusion and long-term sustainability, ensuring no journey is walked alone. At Soultrove, Arindam brings strategic vision and leadership experience to build India's most trusted digital ecosystem for developmental disabilities, enabling early diagnosis, holistic interventions, skill development and future planning.",
-                image: "/arindam-majumdar-founder.jpg",
+                  "Arindam Majumdar is a senior business leader with 30+ years of experience across leading multinational organizations in energy, infrastructure and technology. He has held CEO and CXO roles, driving business growth, market expansion and successful turnarounds while building high-performing teams and fostering innovation.\n\nDriven by his journey as a parent to a young adult with developmental disability, Arindam founded Soultrove to empower families through access, inclusion and long-term sustainability, ensuring no journey is walked alone. At Soultrove, Arindam brings strategic vision and leadership experience to build India's most trusted digital ecosystem for developmental disabilities, enabling early diagnosis, holistic interventions, skill development and future planning.",
+                image: "/arindam-majumdar.jpeg",
               },
               {
                 name: "Swati Majumdar",
                 role: "Director & Co-Founder, Soultrove India Pvt Ltd",
                 description:
-                  "Swati Majumdar, Co-Founder and Director at Soultrove, is deeply committed to empowering individuals with developmental disabilities. With a B.Tech in Computer Science and a decade of experience in leading global software services companies, she built expertise in development, delivery and stakeholder engagement. Choosing to leave her corporate career to become a full-time caregiver and teacher for her child, Swati gained first-hand understanding of the challenges faced by families navigating special needs. At Soultrove, she combines her technical knowledge, caregiving experience and passion to create a supportive ecosystem that empowers children, families and professionals to thrive together.",
-                image: "/swati-majumdar-cofounder.jpg",
+                  "Swati Majumdar, Co-Founder and Director at Soultrove, is deeply committed to empowering individuals with developmental disabilities. With a B.Tech in Computer Science and a decade of experience in leading global software services companies, she built expertise in development, delivery and stakeholder engagement.\n\nChoosing to leave her corporate career to become a full-time caregiver and teacher for her child, Swati gained first-hand understanding of the challenges faced by families navigating special needs. At Soultrove, she combines her technical knowledge, caregiving experience and passion to create a supportive ecosystem that empowers children, families and professionals to thrive together.",
+                image: "/swati-majumdar.jpeg",
               },
               {
                 name: "Rajeev Chakrabarti",
                 role: "Director & CSMO, Soultrove India Pvt Ltd",
                 description:
-                  "Rajeev Chakrabarti brings over 25 years of leadership experience at the CXO level, where he scaled businesses, built brands, and guided organizations with vision and discipline. His entrepreneurial journey further strengthened his ability to merge strategy with purpose. As a parent, he deeply relates to the challenges families face in raising children with diverse needs and has witnessed these journeys closely through friends and relatives. At Soultrove, Rajeev leverages his strategic expertise and empathy to shape an inclusive ecosystem that improves access to therapy, healthcare, education and employment for individuals with autism and other developmental conditions across their life stages.",
-                image: "/rajeev-chakrabarti-csmo.jpg",
+                  "Rajeev Chakrabarti brings over 25 years of leadership experience at the CXO level, where he scaled businesses, built brands, and guided organizations with vision and discipline. His entrepreneurial journey further strengthened his ability to merge strategy with purpose.\n\nAs a parent, he deeply relates to the challenges families face in raising children with diverse needs and has witnessed these journeys closely through friends and relatives. At Soultrove, Rajeev leverages his strategic expertise and empathy to shape an inclusive ecosystem that improves access to therapy, healthcare, education and employment for individuals with autism and other developmental conditions across their life stages.",
+                image: "/rajeev-chakrabarti.jpeg",
               },
             ].map((member, index) => (
-              <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-4 sm:p-6">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 text-center">{member.name}</h4>
-                  <p className="text-sm sm:text-base font-medium mb-4 text-center" style={{ color: "#d16050" }}>
-                    {member.role}
-                  </p>
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-left">{member.description}</p>
+              <Card key={index} className="bg-card hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center text-center">
+                    <img
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      className="w-32 h-32 rounded-full mb-4 object-cover"
+                    />
+                    <h4 className="text-lg font-semibold text-foreground mb-2">{member.name}</h4>
+                    <p className="text-sm font-medium text-primary mb-4">{member.role}</p>
+                    <div className="text-sm text-muted-foreground leading-relaxed space-y-3 text-left">
+                      {member.description.split("\n\n").map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))}
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -262,16 +335,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer - Copyright Only */}
-      <footer className="text-white py-6" style={{ backgroundColor: "#d16050" }}>
+      <footer className="text-primary-foreground py-6 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="text-center text-sm sm:text-base"
-            style={{
-              color: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            <p>&copy; 2025 Soultrove. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <div className="text-center text-sm sm:text-base text-primary-foreground/80">
+            <p>
+              &copy; 2025 Soultrove. All rights reserved. |{" "}
+              <Link href="/privacy" className="hover:text-primary-foreground transition-colors">
+                Privacy Policy
+              </Link>{" "}
+              |{" "}
+              <Link href="/terms" className="hover:text-primary-foreground transition-colors">
+                Terms of Service
+              </Link>
+            </p>
           </div>
         </div>
       </footer>
