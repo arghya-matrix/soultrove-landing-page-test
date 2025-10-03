@@ -233,7 +233,7 @@ export default function WhatWeDoPage() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <div className="bg-secondary/10 rounded-lg p-6 sm:p-8">
               <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Our Solution</p>
               <p className="text-base sm:text-lg text-gray-700">
@@ -241,7 +241,7 @@ export default function WhatWeDoPage() {
                 in one seamless platform.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
