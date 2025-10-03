@@ -1,11 +1,10 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Heart, Users, Shield, Star, BookOpen, Scale, Menu, X } from "lucide-react"
+import { Heart, Users, Shield, Star, BookOpen, Scale, Menu, X, CheckCircle } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
-export default function ServicesPage() {
+export default function WhatWeDoPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -13,7 +12,7 @@ export default function ServicesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,25 +27,25 @@ export default function ServicesPage() {
               <div className="ml-10 flex items-baseline space-x-8">
                 <Link
                   href="/"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-gray-900 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-gray-900 px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
-                  Services
+                  What We Do
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#d16050] cursor-pointer transition-colors"
+                  className="text-gray-700 px-3 py-2 text-sm font-medium hover:text-primary cursor-pointer transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -56,7 +55,7 @@ export default function ServicesPage() {
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-[#d16050] p-2 transition-colors"
+                className="text-gray-700 hover:text-primary p-2 transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -69,28 +68,28 @@ export default function ServicesPage() {
               <div className="flex flex-col space-y-1">
                 <Link
                   href="/"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-primary hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-primary hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-gray-900 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-gray-900 px-4 py-3 text-base font-medium hover:text-primary hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Services
+                  What We Do
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-[#d16050] hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
+                  className="text-gray-700 px-4 py-3 text-base font-medium hover:text-primary hover:bg-gray-50 cursor-pointer text-left transition-colors rounded-md mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact Us
@@ -102,121 +101,139 @@ export default function ServicesPage() {
       </header>
 
       {/* Hero Section */}
-      <section
-        className="relative text-white py-12 sm:py-16 lg:py-20"
-        style={{ background: `linear-gradient(135deg, #d16050 0%, #953f37 100%)` }}
-      >
+      <section className="relative text-white py-8 sm:py-10 lg:py-12 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-balance leading-tight">
-            Our Services
+            What We Do
           </h1>
-          <p
-            className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4"
-            style={{ color: "rgba(255, 255, 255, 0.9)" }}
-          >
-            Comprehensive support services across all aspects of life for individuals with developmental disabilities
-            and their families.
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4 text-primary-foreground/90">
+            Building a comprehensive digital ecosystem that bridges gaps in knowledge, services, community, and
+            long-term planning for families of persons with developmental disabilities.
           </p>
         </div>
       </section>
 
-      {/* What We Do Section */}
+      {/* The Challenges We're Solving Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">What We Do</h2>
+            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">The Challenges We're Solving</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-              Our holistic approach covers every aspect of life, providing comprehensive support from early intervention
-              to lifelong care.
+              Families of persons with developmental disabilities often struggle with interconnected challenges that we
+              address through our holistic platform.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {[
+              {
+                title: "Scattered, unreliable, and non-credible information",
+                description:
+                  "Families spend countless hours searching for trustworthy information across multiple sources",
+                icon: Shield,
+              },
+              {
+                title: "Limited and inconsistent access to quality therapies and schools",
+                description:
+                  "Finding qualified providers and maintaining continuity of care remains a significant challenge",
+                icon: Heart,
+              },
+              {
+                title: "Legal and financial uncertainties regarding guardianship and future care",
+                description:
+                  "Complex legal and financial planning needs often go unaddressed due to lack of accessible guidance",
+                icon: Scale,
+              },
+              {
+                title: "Marginalization and lack of inclusion in mainstream society",
+                description:
+                  "Limited opportunities for community engagement and social inclusion affect long-term outcomes",
+                icon: Users,
+              },
+            ].map((challenge, index) => (
+              <Card
+                key={index}
+                className="bg-white hover:shadow-lg transition-shadow duration-300 border-l-4 border-l-primary"
+              >
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start space-x-4">
+                    <challenge.icon className="h-8 sm:h-10 w-8 sm:w-10 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">{challenge.title}</h3>
+                      <p className="text-base sm:text-lg text-gray-600">{challenge.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-secondary/10 rounded-lg p-6 sm:p-8">
+              <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Our Solution</p>
+              <p className="text-base sm:text-lg text-gray-700">
+                Soultrove bridges these gaps by offering knowledge, verified services, community and long-term planning
+                in one seamless platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Does Our App Work Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-secondary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">How Does Our App Work</h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+              Simple step-by-step: Browse → Connect → Access Support → Track Progress → Gain knowledge & insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
             {[
               {
                 title: "Health & Therapies",
-                description: "Discover, book, track progress with qualified therapists and healthcare providers",
+                description: "Discover, book, track progress",
                 icon: Heart,
-                image: "/family-therapy-session-with-parents-and-children.jpg",
-                services: [
-                  "Speech & Language Therapy",
-                  "Occupational Therapy",
-                  "Physical Therapy",
-                  "Behavioral Therapy (ABA)",
-                  "Developmental Pediatrics",
-                  "Mental Health Support",
-                ],
+                details:
+                  "Connect with qualified therapists, healthcare providers, and track your progress through comprehensive care coordination.",
               },
               {
                 title: "Education & Skill Building",
-                description: "Curated learning and vocational pathways for lifelong development",
+                description: "Curated learning and vocational pathways",
                 icon: BookOpen,
-                image: "/individual-therapy-session-one-on-one.jpg",
-                services: [
-                  "Special Education Schools",
-                  "Inclusive Education Support",
-                  "Vocational Training Programs",
-                  "Life Skills Development",
-                  "Academic Tutoring",
-                  "Career Counseling",
-                ],
+                details:
+                  "Access specialized education resources, vocational training programs, and skill development opportunities tailored to individual needs.",
               },
               {
                 title: "Legal & Financial Planning",
-                description: "Guardianship, trusts, future care tools for long-term security",
+                description: "Guardianship, trusts, future care tools",
                 icon: Scale,
-                image: "/child-therapy-session-with-young-person.jpg",
-                services: [
-                  "Guardianship Planning",
-                  "Special Needs Trusts",
-                  "Estate Planning",
-                  "Government Benefits Navigation",
-                  "Legal Advocacy",
-                  "Financial Planning",
-                ],
+                details:
+                  "Navigate complex legal requirements, establish trusts, and plan for long-term financial security with expert guidance.",
               },
               {
                 title: "Community & Inclusion",
-                description: "Peer support, events, workshops, and inclusion pathways",
+                description: "Peer support, events, workshops",
                 icon: Users,
-                image: "/group-therapy-circle-with-multiple-people.jpg",
-                services: [
-                  "Support Groups",
-                  "Community Events",
-                  "Inclusion Workshops",
-                  "Peer Mentoring",
-                  "Employment Support",
-                  "Social Skills Training",
-                ],
+                details:
+                  "Join a supportive community, participate in events, and access workshops designed to promote inclusion and connection.",
               },
-            ].map((service, index) => (
+              {
+                title: "Marketplace & CSR Integration",
+                description: "Assistive products, corporate-sponsored CSR initiatives",
+                icon: Star,
+                details:
+                  "Access assistive technologies, products, and benefit from corporate social responsibility programs designed to support your journey.",
+              },
+            ].map((feature, index) => (
               <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <service.icon className="h-8 sm:h-10 w-8 sm:w-10 flex-shrink-0 mt-1" style={{ color: "#d16050" }} />
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                      <p className="text-base sm:text-lg text-gray-600 mb-4">{service.description}</p>
-                    </div>
-                  </div>
-
-                  <img
-                    src={service.image || "/placeholder.svg"}
-                    alt={service.title}
-                    className="w-full h-48 sm:h-56 object-cover rounded-lg mb-6"
-                  />
-
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Services Include:</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {service.services.map((item, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#d16050" }}></div>
-                          <span className="text-sm text-gray-700">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <CardContent className="p-6 sm:p-8 text-center">
+                  <feature.icon className="h-12 sm:h-16 w-12 sm:w-16 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-base sm:text-lg text-primary font-medium mb-4">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600">{feature.details}</p>
                 </CardContent>
               </Card>
             ))}
@@ -224,112 +241,104 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-amber-50">
+      {/* Key Benefits Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <h2 className="text-2xl sm:3xl md:text-4xl font-bold text-gray-900 mb-4">Key Benefits Of Our App</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-              Our simple, step-by-step process makes it easy to access comprehensive support for developmental
-              disabilities.
+              Comprehensive benefits designed for both families seeking support and service providers looking to make an
+              impact.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 mb-12">
-            {[
-              {
-                step: "1",
-                title: "Browse",
-                description: "Explore our comprehensive ecosystem of services and providers",
-                image: "/consultation-meeting-with-therapist.jpg",
-                details:
-                  "Search by location, specialty, language, and specific needs to find the right match for your family.",
-              },
-              {
-                step: "2",
-                title: "Connect",
-                description: "Find and connect with verified professionals in your area",
-                image: "/therapist-matching-process.jpg",
-                details: "View detailed profiles, read reviews, and schedule consultations with qualified providers.",
-              },
-              {
-                step: "3",
-                title: "Access Support",
-                description: "Begin your journey with personalized care and services",
-                image: "/therapy-session-beginning.jpg",
-                details: "Start receiving services tailored to your individual needs and goals.",
-              },
-              {
-                step: "4",
-                title: "Track Progress",
-                description: "Monitor development and adjust plans as needed",
-                image: "/progress-tracking-in-therapy.jpg",
-                details:
-                  "Use our tools to track milestones, share progress with your team, and make data-driven decisions.",
-              },
-              {
-                step: "5",
-                title: "Gain Knowledge",
-                description: "Access insights, resources, and community support",
-                image: "/happy-family-with-children-and-parents.jpg",
-                details: "Connect with other families, access educational resources, and build your support network.",
-              },
-            ].map((step, index) => (
-              <Card key={index} className="bg-white text-center hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-4 sm:p-6">
-                  <img
-                    src={step.image || "/placeholder.svg"}
-                    alt={step.title}
-                    className="w-full h-32 sm:h-40 object-cover rounded-lg mb-4"
-                  />
-                  <Badge
-                    className="text-white text-base sm:text-lg px-3 py-1 mb-3 sm:mb-4"
-                    style={{ backgroundColor: "#d16050" }}
-                  >
-                    {step.step}
-                  </Badge>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">{step.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3">{step.description}</p>
-                  <p className="text-xs sm:text-sm text-gray-500">{step.details}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Process Benefits */}
-          <div className="text-center">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-8">Why Our Process Works</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* For Parents & Families */}
+          <div className="mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">For Parents & Families</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {[
                 {
-                  title: "Verified Quality",
-                  description: "All providers are thoroughly vetted and credentialed",
-                  icon: Shield,
+                  title: "One-stop ecosystem",
+                  description: "Access therapies, education, skills, and future planning in one trusted platform.",
                 },
                 {
-                  title: "Personalized Matching",
-                  description: "AI-powered recommendations based on your specific needs",
-                  icon: Star,
+                  title: "Continuity of care",
+                  description: "Support across all life stages-childhood, adolescence, and adulthood.",
                 },
                 {
-                  title: "Continuous Support",
-                  description: "Ongoing guidance throughout your journey",
-                  icon: Heart,
+                  title: "Verified providers",
+                  description: "Connect with qualified therapists, educators, and experts near you.",
                 },
                 {
-                  title: "Community Driven",
-                  description: "Built with input from families and providers",
-                  icon: Users,
+                  title: "Knowledge hub",
+                  description: "Learn through curated resources, success stories, and community insights.",
+                },
+                {
+                  title: "Future-ready planning",
+                  description: "Legal and financial tools to secure your child's tomorrow.",
+                },
+                {
+                  title: "Community support",
+                  description: "Feel less alone through shared experiences and peer connection.",
                 },
               ].map((benefit, index) => (
-                <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 sm:p-6 text-center">
-                    <benefit.icon
-                      className="h-8 sm:h-10 w-8 sm:w-10 mx-auto mb-3 sm:mb-4"
-                      style={{ color: "#d16050" }}
-                    />
-                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
-                    <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
+                <Card
+                  key={index}
+                  className="bg-white hover:shadow-lg transition-shadow duration-300 border-t-4 border-t-primary"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
+                        <p className="text-sm text-gray-600">{benefit.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* For Service Providers */}
+          <div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">For Service Providers</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {[
+                {
+                  title: "Increased visibility",
+                  description: "Reach families actively seeking services in your city.",
+                },
+                {
+                  title: "Credibility & trust",
+                  description: "Be part of a verified, quality-first platform.",
+                },
+                {
+                  title: "Collaboration opportunities",
+                  description: "Work alongside other professionals for holistic outcomes.",
+                },
+                {
+                  title: "Simplified discovery",
+                  description:
+                    "Families can find you by your offerings, specialization, language, location, infrastructure and other filters.",
+                },
+                {
+                  title: "Impact at scale",
+                  description: "Contribute to inclusion and long-term change for the community.",
+                },
+              ].map((benefit, index) => (
+                <Card
+                  key={index}
+                  className="bg-white hover:shadow-lg transition-shadow duration-300 border-t-4 border-t-secondary"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
+                        <p className="text-sm text-gray-600">{benefit.description}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -339,14 +348,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer - Copyright Only */}
-      <footer className="text-white py-6" style={{ backgroundColor: "#d16050" }}>
+      <footer className="text-white py-6 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="text-center text-sm sm:text-base"
-            style={{
-              color: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
+          <div className="text-center text-sm sm:text-base text-primary-foreground/80">
             <p>&copy; 2025 Soultrove. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
