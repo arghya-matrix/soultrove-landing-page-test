@@ -232,16 +232,6 @@ export default function WhatWeDoPage() {
               </div>
             </div>
           </div>
-
-          {/* <div className="text-center mt-12">
-            <div className="bg-secondary/10 rounded-lg p-6 sm:p-8">
-              <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Our Solution</p>
-              <p className="text-base sm:text-lg text-gray-700">
-                Soultrove bridges these gaps by offering knowledge, verified services, community and long-term planning
-                in one seamless platform.
-              </p>
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -371,7 +361,7 @@ export default function WhatWeDoPage() {
             {/* Image - Right */}
             <div className="relative h-[400px] lg:h-[700px] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/app-benefits.jpg"
+                src="/app-benefits-family-focus.jpg"
                 alt="Benefits of Soultrove app for families and service providers"
                 className="w-full h-full object-cover"
               />

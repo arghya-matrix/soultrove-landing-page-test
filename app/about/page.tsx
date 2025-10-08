@@ -208,14 +208,13 @@ export default function AboutPage() {
             <div className="lg:sticky lg:top-24">
               <div className="relative">
                 <img
-                  src="/therapist-patient-clean-background.jpg"
-                  alt="The Story of Soultrove - Connecting families and therapists"
+                  src="/stay-positive-empowerment.jpg"
+                  alt="The Story of Soultrove - Empowerment and hope"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-white/90 p-3 rounded-lg shadow-md">
                   <img src="/soultrove-logo.svg" alt="Soultrove Logo" className="h-12 w-auto" />
                 </div>
-                
               </div>
             </div>
           </div>
@@ -229,7 +228,7 @@ export default function AboutPage() {
             {/* Left side - Image */}
             <div className="order-2 lg:order-1">
               <img
-                src="/therapist-elderly-caring.jpg"
+                src="/core-values-puzzle.jpg"
                 alt="What We Stand For - Our Core Values"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
               />

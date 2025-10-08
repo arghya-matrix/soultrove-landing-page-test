@@ -143,8 +143,8 @@ export default function HomePage() {
             {/* Left side - Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src="/digital-therapy-ecosystem.jpg"
-                alt="Digital ecosystem with therapists providing online sessions"
+                src="/network-ecosystem.jpeg"
+                alt="Digital ecosystem network connecting multiple devices and stakeholders"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
