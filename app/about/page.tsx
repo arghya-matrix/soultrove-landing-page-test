@@ -212,9 +212,9 @@ export default function AboutPage() {
                   alt="The Story of Soultrove - Empowerment and hope"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 p-3 rounded-lg shadow-md">
+                {/* <div className="absolute top-4 left-4 bg-white/90 p-3 rounded-lg shadow-md">
                   <img src="/soultrove-logo.svg" alt="Soultrove Logo" className="h-12 w-auto" />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
